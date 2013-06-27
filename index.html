@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="jqm-pageEventRouter : A utility component and guidance for creating a well structured jQuery Mobile web app" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>jqm-pageEventRouter</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Robert-Altland/jqm-pageEventRouter">View on GitHub</a>
+
+          <h1 id="project_title">jqm-pageEventRouter</h1>
+          <h2 id="project_tagline">A utility component and guidance for creating a well structured jQuery Mobile web app</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Robert-Altland/jqm-pageEventRouter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Robert-Altland/jqm-pageEventRouter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="what-it-is" class="anchor" href="#what-it-is"><span class="octicon octicon-link"></span></a>What it is</h2>
+
+<p>jqm-pageEventRouter is a utility component and guidance (through a sample project) that facilitates well structured JavaScript using a code-behind model familiar to ASP.NET server developers. It is intended for developers new to jQuery Mobile who are working on small to medium sized mobile web applications. It can also be used for simple PhoneGap applications written using jQuery and jQuery Mobile.</p>
+
+<h2>
+<a name="how-it-works" class="anchor" href="#how-it-works"><span class="octicon octicon-link"></span></a>How it works</h2>
+
+<p>jqm-pageEventRouter uses a custom data-codebehind attribute to associate the current $.mobile.activePage with a dynamically created instance of a JavaScript code-behind class which extends a basePage class. The component subscribes to jQuery Mobile page events and dynamically routes them to the correct "event handler" methods in the active code-behind object. It caches the active code-behind object using jqmData() on $.mobile.activePage. When $.mobile.activePage changes, the code-behind object is removed. When you revisit a page, you get a new dynamically created instance of the code-behind class.</p>
+
+<h2>
+<a name="required-and-optional-dependencies" class="anchor" href="#required-and-optional-dependencies"><span class="octicon octicon-link"></span></a>Required and optional dependencies</h2>
+
+<p>This sample is built using ASP.NET MVC 4, but will work with previous versions of MVC or WebForms. It requires jQuery 1.9.1 and jQuery Mobile 1.3.1. The unit tests require QUnit 1.3.0.</p>
+
+<p>This sample uses TypeScript to provide type safety and inheritance, and uses type definition files to compile classes that use jQuery, jQuery Mobile and QUnit. TypeScript is not required to use this component. </p>
+
+<p>This sample also uses WebGrease and System.Web.Optimization for bundling and minification. These libraries are not required to use this component.</p>
+
+<h2>
+<a name="work-in-progress" class="anchor" href="#work-in-progress"><span class="octicon octicon-link"></span></a>Work in progress</h2>
+
+<p>There are several areas throughout the code tagged with TODO: comments, indicating known inefficiencies, workarounds or just bad practices (ex: JavaScript eval). </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">jqm-pageEventRouter maintained by <a href="https://github.com/Robert-Altland">Robert-Altland</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

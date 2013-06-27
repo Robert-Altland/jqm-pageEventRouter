@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<div data-role="page" data-codebehind="views.firstPage">
+    <h2>First Page</h2>
+    <div>Date created: <span data-id="spnDateCreated"></span></div>
+    <a href="/Home/Index2" data-role="button">Go to second page</a>
+    <a href="/Test/Index" data-ajax="false" data-role="button">Go to unit test page</a>
+</div>
